@@ -1,5 +1,9 @@
 pipeline {
     agent any 
+    tools {
+        jdk 'openjdk-1.8'
+        maven 'Maven_3_6_3'
+    }
     stages {
         stage('Compile and Clean') { 
             steps {
