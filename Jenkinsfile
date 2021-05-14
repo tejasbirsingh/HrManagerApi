@@ -20,12 +20,12 @@ pipeline {
         }      
         stage('Archving') { 
             steps {
-                 archiveArtifacts '**/target/fileDeploy.jar'
+                 archiveArtifacts '**/target/*.jar'
             }
         }
         stage('Deploying'){
         	steps{
-        	  bat 'copy **/target/fileDeploy.jar "C:/Program Files/Apache Software Foundation/apache-tomcat-9.0.45/webapps/"'
+        	  bat 'copy "**/target/*.jar" "C:/Program Files/Apache Software Foundation/apache-tomcat-9.0.45/webapps"'
         	}
         }
     }
