@@ -23,5 +23,10 @@ pipeline {
                  archiveArtifacts '**/target/*.jar'
             }
         }
+        stage('Deploying'){
+        	steps{
+        	  bat 'cp **/target/*.jar C:\Program Files\Apache Software Foundation\apache-tomcat-9.0.45/webapps/'
+        	}
+        }
     }
 }
