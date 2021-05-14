@@ -6,11 +6,13 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
+
 		<version>2.4.5</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.nagarro</groupId>
 	<artifactId>Server</artifactId>
+	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Assignment5</name>
 	<description>Spring Boot Restful API for employee management web app</description>
