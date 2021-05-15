@@ -66,7 +66,7 @@
 
 
 		</plugins>
-		<finalName>API</finalName>
+		<finalName>api</finalName>
 	</build>
 
 </project>

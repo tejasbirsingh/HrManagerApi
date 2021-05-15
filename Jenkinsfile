@@ -1,6 +1,9 @@
 pipeline {
     agent any 
-  
+    
+    triggers {
+        pollSCM '* * * * *'
+    }
     stages {
         stage('Compile and Clean') { 
             steps {
@@ -26,6 +29,7 @@ pipeline {
         stage('Archiving') { 
             steps {
                  archiveArtifacts '**/target/*.war'
+                 
             }
         }
        stage('Deploy on Tomcat'){
